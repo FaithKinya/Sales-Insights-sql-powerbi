@@ -1,5 +1,5 @@
 ## Sales Insights Data Analysis Project
-In this project, i did data analysis with both SQL and Power Bi. I did data transformation too using Power Quesry Language by removing unnecessary columns, added other columns and others as explained below.
+In this project, i did data analysis with both SQL and Power Bi. I did data transformation too using Power Query by removing unnecessary columns, added other columns and others as explained below.
 
 
 ### Data Analysis Using SQL
