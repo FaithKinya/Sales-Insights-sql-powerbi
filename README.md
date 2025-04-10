@@ -42,25 +42,25 @@ In this project, i did data analysis with both SQL and Power Bi. I did data tran
 and transactions.market_code="Mark001";`
 
 
-Data Analysis Using Power BI
+### Data Analysis Using Power BI
 ============================
 
 1. Formula to create norm_amount column
 
-`= Table.AddColumn(#"Filtered Rows", "norm_amount", each if [currency] = "USD" or [currency] ="USD#(cr)" then [sales_amount]*75 else [sales_amount], type any)`
+    `= Table.AddColumn(#"Filtered Rows", "norm_amount", each if [currency] = "USD" or [currency] ="USD#(cr)" then [sales_amount]*75 else [sales_amount], type any)`
 
 2. Removed the rows with -1 and 0 in sales amount
 
-`= Table.SelectRows(transactions_Table, each ([sales_amount] <> -1 and [sales_amount] <> 0))`
+    `= Table.SelectRows(transactions_Table, each ([sales_amount] <> -1 and [sales_amount] <> 0))`
 
 3. Added a conditional column for changing the USD to INR
 
-   `= Table.AddColumn(#"Removed -1,0 in sales amount", "Custom", each if [currency] = "USD" then 1 else null)`
+    `= Table.AddColumn(#"Removed -1,0 in sales amount", "Custom", each if [currency] = "USD" then 1 else null)`
 
 5. Since the INR and USD were repeated twice i.e INR\r, INR, USD, USD\r, i removed the rows that contained tthe least  number of rows so that it doesnt affect the dataset. I dd this by selecting only the two currencies i want which was the INR and USD and removed the INR\r and USD\r.
 
 
-Dashboard 
+### Dashboard 
 ============================
 
 NB: This is a work in progress
