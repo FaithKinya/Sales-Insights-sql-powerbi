@@ -43,7 +43,6 @@ and transactions.market_code="Mark001";`
 
 
 ### Data Analysis Using Power BI
-============================
 
 1. Formula to create norm_amount column
 
@@ -61,7 +60,6 @@ and transactions.market_code="Mark001";`
 
 
 ### Dashboard 
-============================
 
 NB: This is a work in progress
 
